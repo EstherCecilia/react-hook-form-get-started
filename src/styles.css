@@ -6,8 +6,9 @@ body {
 }
 
 form {
-  max-width: 500px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
 }
 
 h1 {
@@ -15,13 +16,16 @@ h1 {
   color: white;
   text-align: center;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgb(79, 98, 148);
+  border-bottom: 1px solid #bf1650;
+}
+.div {
+  min-width: 400px;
 }
 
 .form {
   background: #0e101c;
-  max-width: 400px;
   margin: 0 auto;
+  max-width: 400px;
 }
 
 p {

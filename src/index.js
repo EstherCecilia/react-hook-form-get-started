@@ -7,14 +7,15 @@ function App() {
     register,
     watch,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
   console.log(errors);
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="div">
+        <h1>Formulario</h1>
         <input
           type="text"
           placeholder="First name"
@@ -36,7 +37,7 @@ function App() {
           {...register("Mobile number", {
             required: true,
             minLength: 6,
-            maxLength: 12
+            maxLength: 12,
           })}
         />
         <select {...register("Title", { required: true })}>
@@ -46,7 +47,6 @@ function App() {
           <option value="Miss">Miss</option>
           <option value="Dr">Dr</option>
         </select>
-
         <div className="cambo">
           <span>Yes</span>
           <input
@@ -62,8 +62,9 @@ function App() {
           />
         </div>
         <input type="submit" />
-      </form>
-      <div>
+      </div>
+      <div className="div">
+        <h1>Watch</h1>
         <p>{`{`}</p>
         <span>{`"First name" : ${watch("First name")}`}</span>
         <span>{`"Last name" : ${watch("Last name")}`}</span>
@@ -73,7 +74,7 @@ function App() {
         <span>{`"Developer" : ${watch("Developer")}`}</span>
         <p>{`}`}</p>
       </div>
-    </div>
+    </form>
   );
 }
 
